@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EasyFast — Weightloss AI that never leaves your phone</title>
+<meta name="description" content="Type what you ate and it logs. A curated, verified food database. An adaptive calorie target measured from your own data. Entirely on your iPhone.">
+<style>
+  :root{
+    --bg:#FFFFFF; --surface:#F7F6F4; --stroke:#E8E3DD;
+    --text:#17130F; --text2:#5C544C; --text3:#8A8175;
+    /* The ink pair, not the fill pair: the vivid brand orange is 2.9:1 on
+       white and this is a page made of text. */
+    --accent:#B03A05; --accent2:#C2410C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0E0C0B; --surface:#1A1614; --stroke:#2C2623;
+      --text:#F6F3F0; --text2:#A79E96; --text3:#8B8279;
+      --accent:#FF8C42; --accent2:#FFA05C;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:52px 20px 100px}
+  .mark{font-weight:800;font-size:15px;letter-spacing:-.2px}
+  .mark span{background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:clamp(34px,6vw,54px);line-height:1.06;letter-spacing:-1.4px;margin:30px 0 14px;max-width:14ch}
+  .lede{font-size:clamp(17px,2.4vw,21px);color:var(--text2);max-width:56ch;margin:0 0 26px}
+  .pill{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.3px;
+    color:var(--accent);background:color-mix(in srgb, var(--accent) 12%, transparent);
+    border-radius:999px;padding:6px 12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:34px 0}
+  .card{background:var(--surface);border:1px solid var(--stroke);border-radius:18px;padding:20px}
+  .card h3{margin:0 0 6px;font-size:16.5px;letter-spacing:-.2px}
+  .card p{margin:0;color:var(--text2);font-size:14.5px}
+  h2{font-size:clamp(24px,3.4vw,32px);letter-spacing:-.7px;margin:64px 0 10px}
+  .steps{counter-reset:s;list-style:none;padding:0;margin:22px 0}
+  .steps li{counter-increment:s;position:relative;padding-left:46px;margin:16px 0;color:var(--text2)}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;
+    border-radius:50%;background:color-mix(in srgb, var(--accent) 14%, transparent);
+    color:var(--accent);font-weight:700;font-size:14px;display:grid;place-items:center}
+  .steps strong{color:var(--text);display:block;font-size:16px}
+  .quote{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:30px 0;
+    font-size:18px;color:var(--text);max-width:56ch}
+  .foot{margin-top:70px;padding-top:22px;border-top:1px solid var(--stroke);
+    color:var(--text3);font-size:13.5px}
+  a{color:var(--accent)}
+  code{font:0.92em/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
+    background:var(--surface);border:1px solid var(--stroke);
+    border-radius:6px;padding:1px 5px}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">Easy<span>Fast</span></div>
+
+  <span class="pill" style="margin-top:28px">No account · No subscription · No cloud</span>
+  <h1>Type what you ate. That's the whole app.</h1>
+  <p class="lede">“2 eggs, toast with butter, large coffee” — read, priced from a
+  checked food database, and logged. Then a calorie target that is measured from
+  your own results rather than predicted from a formula about someone your size.
+  All of it on the device, in your pocket, on a plane.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Natural-language logging</h3>
+      <p>Type a sentence. No search screens, no dropdowns, no scrolling a list of
+      four hundred bananas. “2 medium bananas”, “half a cup of rice”,
+      “3 slices of toast this morning” — all of it lands where it should.</p>
+    </div>
+    <div class="card">
+      <h3>Barcodes, offline</h3>
+      <p>Point at the packet. It decodes on the device, so it works in the aisle
+      of a shop with no signal — which is the only place anyone uses it.</p>
+    </div>
+    <div class="card">
+      <h3>A database that is checked</h3>
+      <p>175 curated foods with 386 named portions, verified against published
+      reference data. Every row says where its numbers came from. Yours are
+      labelled as yours, and a takeaway curry is labelled an estimate.</p>
+    </div>
+    <div class="card">
+      <h3>Recents that actually learn</h3>
+      <p>The milk that goes in every coffee outranks the jar you opened once a
+      month ago — with the amount you had last time already filled in.</p>
+    </div>
+    <div class="card">
+      <h3>Adaptive calorie target</h3>
+      <p>Measured weekly from what you logged and what your weight trend did.
+      It follows a new job, a training block, or simply being lighter.</p>
+    </div>
+    <div class="card">
+      <h3>A trend, not a reading</h3>
+      <p>A smoothed line with its own noise band drawn around it, so a salty
+      dinner never looks like a bad week.</p>
+    </div>
+    <div class="card">
+      <h3>Saved meals and repeat days</h3>
+      <p>Build your breakfast once. Copy a whole Tuesday. After a fortnight most
+      days are three taps.</p>
+    </div>
+    <div class="card">
+      <h3>A coach for the hard part</h3>
+      <p>A short, scripted conversation for a craving — HALT, delay-and-decide,
+      urge surfing — where having the thing is an acceptable outcome.</p>
+    </div>
+    <div class="card">
+      <h3>Easy mode for bad days</h3>
+      <p>Describe the plate instead of weighing it. A rough day logged is worth
+      far more than a perfect day missing.</p>
+    </div>
+    <div class="card">
+      <h3>Food from where you eat</h3>
+      <p>Roti, dal, biryani, idli, dosa, hummus, falafel, shawarma, machboos,
+      tabbouleh, pho, pad thai and arepa, with their own portions — not bolted
+      on as an afterthought.</p>
+    </div>
+    <div class="card">
+      <h3>Plan the day before it happens</h3>
+      <p>Pre-log tonight's dinner and it reserves the calories without pretending
+      you have eaten them. The day's total stays honest until you confirm.</p>
+    </div>
+    <div class="card">
+      <h3>A lock, because it is private</h3>
+      <p>Face ID, Touch ID or your passcode on the diary itself. And a quiet mode
+      that replaces every figure with a word, for when the number is the problem.</p>
+    </div>
+  </div>
+
+  <h2>How the target is worked out</h2>
+  <ol class="steps">
+    <li><strong>Energy in</strong>What you logged, averaged over the days you
+      logged. Days you missed are treated as missing, never as days you ate
+      nothing.</li>
+    <li><strong>Energy stored</strong>What your smoothed weight trend actually
+      did over the same week, at 7,700 kcal per kilogram.</li>
+    <li><strong>Energy out</strong>The difference — measured, for you, rather than
+      predicted for someone your height and age.</li>
+    <li><strong>Your target</strong>That figure, minus the rate you asked for,
+      inside floors the app will not go below.</li>
+  </ol>
+
+  <div class="quote">
+    It is adherence-neutral. A patchy week counts for less; it is never held
+    against you. If you consistently log a little under, the estimate comes out a
+    little under too — and the target still delivers the rate you asked for.
+  </div>
+
+  <h2>What it will not do</h2>
+  <p class="lede" style="font-size:17px">No streaks to break. No red numbers for
+  eating. Nothing is a cheat, and nothing has to be burned off. The target will
+  not go below what your body uses at rest, and it will not chase a goal weight
+  below a healthy one — not as a lecture, just as a number the app declines to
+  hand you.</p>
+
+  <h2>Why on-device is the point</h2>
+  <p class="lede" style="font-size:17px">What you eat and what you weigh is, for a
+  lot of people, the most private thing on their phone. This app cannot leak it,
+  because it never sends it. There is no account to breach and no server to
+  subpoena. It works in aeroplane mode, and it will still work if this developer
+  disappears tomorrow.</p>
+
+  <div class="quote">
+    The model never produces a number. Every calorie comes from the food database
+    or from arithmetic on what you logged — and anything the model writes is
+    checked against those figures before you ever see it.
+  </div>
+
+  <h2>The honest catch</h2>
+  <p class="lede" style="font-size:17px">The download is about 770 MB, because the
+  AI ships inside the app rather than living on somebody's server. It is the one
+  cost of an app that has no account, no subscription and nothing to connect to.
+  You pay it once, on Wi-Fi, and then never think about it again.</p>
+
+  <h2>What it costs</h2>
+  <p class="lede" style="font-size:17px">Nothing. No subscription, no in-app
+  purchases, no adverts, no free trial that turns into a bill. Export everything
+  as CSV or a full backup whenever you like — there is no lock-in to protect,
+  because there is nothing to sell you later.</p>
+
+  <div class="foot">
+    EasyFast · <a href="privacy.html">Privacy</a> ·
+    <a href="support.html">Support</a> ·
+    <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a><br>
+    Inference by llama.cpp (MIT). Llama 3.2 is licensed under the Llama 3.2
+    Community License, Copyright © Meta Platforms, Inc. All Rights Reserved.
+    EasyFast is a food and weight diary, not a medical device, and gives no
+    medical advice. If your relationship with food or weight is something you
+    would like help with, a GP, a registered dietitian or a national
+    eating-disorder charity are good places to start.
+  </div>
+</div>
+</body>
+</html>
